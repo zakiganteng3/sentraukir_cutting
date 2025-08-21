@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="id">
+<!DOCTYPE html>
+<html lang="id">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -17,46 +18,49 @@
     .wrap{max-width:1100px;margin:0 auto;padding:24px}
     header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 0}
     .brand{display:flex;align-items:center;gap:12px}
-    .logo{width:56px;height:56px;border-radius:50%;background:radial-gradient(circle at 30% 30%, #67e8f9, #22d3ee 45%, #155e75 80%); box-shadow:0 8px 30px rgba(34,211,238,.35); display:grid; place-items:center; font-weight:800; color:#ffffff; letter-spacing:0.5px}
+    .logo{width:64px;height:64px;border-radius:12px;object-fit:cover;box-shadow:0 4px 12px rgba(0,0,0,.3)}
     h1{font-size:clamp(24px,4vw,36px);margin:0}
     .cta{display:flex;gap:10px;flex-wrap:wrap}
     .btn{padding:12px 16px;border-radius:14px;border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(6px);text-decoration:none;font-weight:600}
     .btn.primary{background:linear-gradient(135deg,#06b6d4,#2dd4bf);color:#07211e;border:none}
-    .btn.ghost{color:#cbd5e1}.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center;padding:34px 0}
-.hero h2{font-size:clamp(26px,4.5vw,44px);margin:0 0 12px}
-.hero p{color:var(--muted);margin:0 0 18px}
-.panel{background:linear-gradient(180deg,#0f1b33,#0c162b);border:1px solid rgba(255,255,255,.08);border-radius:22px;padding:18px}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.card{background:linear-gradient(180deg,#0f1b33,#0d1527);border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:16px}
-.card h3{margin:8px 0 6px;font-size:18px}
-.badge{display:inline-block;padding:6px 10px;border-radius:999px;background:#10203a;border:1px solid rgba(255,255,255,.08);font-size:12px;color:#cbd5e1}
-.feat{display:flex;align-items:flex-start;gap:10px;margin:8px 0;color:#cbd5e1}
-.dot{width:9px;height:9px;border-radius:50%;background:var(--accent);margin-top:7px}
+    .btn.ghost{color:#cbd5e1}
+    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center;padding:34px 0}
+    .hero h2{font-size:clamp(26px,4.5vw,44px);margin:0 0 12px}
+    .hero p{color:var(--muted);margin:0 0 18px}
+    .panel{background:linear-gradient(180deg,#0f1b33,#0c162b);border:1px solid rgba(255,255,255,.08);border-radius:22px;padding:18px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .card{background:linear-gradient(180deg,#0f1b33,#0d1527);border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:16px}
+    .card h3{margin:8px 0 6px;font-size:18px}
+    .badge{display:inline-block;padding:6px 10px;border-radius:999px;background:#10203a;border:1px solid rgba(255,255,255,.08);font-size:12px;color:#cbd5e1}
+    .feat{display:flex;align-items:flex-start;gap:10px;margin:8px 0;color:#cbd5e1}
+    .dot{width:9px;height:9px;border-radius:50%;background:var(--accent);margin-top:7px}
 
-.section{padding:26px 0}
-.section h2{font-size:22px;margin:0 0 10px}
+    .section{padding:26px 0}
+    .section h2{font-size:22px;margin:0 0 10px}
 
-.contact{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
-iframe{width:100%;min-height:320px;border:0;border-radius:16px}
+    .contact{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
+    iframe{width:100%;min-height:320px;border:0;border-radius:16px}
 
-footer{padding:24px 0;color:#94a3b8;font-size:14px}
-.hours{display:flex;gap:10px;flex-wrap:wrap}
-.pill{padding:6px 10px;border-radius:999px;background:#0f1b2e;border:1px solid rgba(255,255,255,.08)}
+    footer{padding:24px 0;color:#94a3b8;font-size:14px}
+    .hours{display:flex;gap:10px;flex-wrap:wrap}
+    .pill{padding:6px 10px;border-radius:999px;background:#0f1b2e;border:1px solid rgba(255,255,255,.08)}
 
-@media (max-width:900px){
-  .hero{grid-template-columns:1fr}
-  .grid{grid-template-columns:1fr}
-  .contact{grid-template-columns:1fr}
-}
-
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr}
+      .contact{grid-template-columns:1fr}
+    }
   </style>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1' y1='0' y2='1'%3E%3Cstop stop-color='%2306b6d4'/%3E%3Cstop offset='1' stop-color='%232dd4bf'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect rx='14' width='64' height='64' fill='url(%23g)'/%3E%3Cpath d='M18 43 L31 18 L45 43 Z' fill='white'/%3E%3C/svg%3E"/>
+
+  <!-- ganti favicon dengan logo -->
+  <link rel="icon" href="logo-sentraukir.jpg" type="image/png">
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Sentra Ukir Jayapura",
-    "image": "",
+    "image": "logo-sentraukir.jpg",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Depan Gereja Baptis, BTN Skylen, Kotaraja",
@@ -66,9 +70,7 @@ footer{padding:24px 0;color:#94a3b8;font-size:14px}
     },
     "telephone": "+628114901407",
     "url": "",
-    "openingHours": ["Mo-Sa 08:00-17:00"],
-    "priceRange": "",
-    "sameAs": []
+    "openingHours": ["Mo-Sa 08:00-17:00"]
   }
   </script>
 </head>
@@ -76,7 +78,7 @@ footer{padding:24px 0;color:#94a3b8;font-size:14px}
   <div class="wrap">
     <header>
       <div class="brand">
-        <div class="logo" aria-label="Logo Sentra Ukir Jayapura">SUJ</div>
+        <img src="logo-sentraukir.jpg" alt="Logo Sentra Ukir Jayapura" class="logo">
         <div>
           <h1>Sentra Ukir Jayapura</h1>
           <div class="badge">Jasa Cutting CNC • Plasma • Laser</div>
@@ -86,78 +88,80 @@ footer{padding:24px 0;color:#94a3b8;font-size:14px}
         <a class="btn ghost" href="tel:+628114901407" aria-label="Telepon Sentra Ukir Jayapura">☎ Telepon</a>
         <a class="btn primary" href="https://wa.me/628114901407?text=Halo%20Sentra%20Ukir%20Jayapura%2C%20saya%20ingin%20konsultasi%20jasa%20cutting" target="_blank" rel="noopener">💬 WhatsApp</a>
       </div>
-    </header><section class="hero panel">
-  <div>
-    <h2>Cutting Presisi • Cepat • Rapi</h2>
-    <p>Kami melayani pemotongan bahan untuk kebutuhan signage, dekorasi, furniture, konstruksi, hingga industri kreatif. Terima file desain siap potong maupun jasa setting desain.</p>
-    <div class="hours">
-      <span class="pill">Jam buka: 08:00 – 17:00 WIT</span>
-      <span class="pill">Lokasi: Depan Gereja Baptis, BTN Skylen, Kotaraja</span>
-      <span class="pill">Jayapura, Papua</span>
-    </div>
-    <div style="margin-top:16px" class="cta">
-      <a class="btn primary" href="https://wa.me/628114901407?text=Halo%20Sentra%20Ukir%20Jayapura%2C%20mau%20tanya%20harga%20dan%20waktu%20pengerjaan" target="_blank" rel="noopener">Konsultasi via WhatsApp</a>
-      <a class="btn ghost" href="#lokasi">Lihat Lokasi</a>
-    </div>
-  </div>
-  <div class="card">
-    <h3 style="margin-top:0">Layanan Kami</h3>
-    <div class="feat"><span class="dot"></span><div><strong>CNC Router</strong><br/><small>Kayu, MDF, triplek, akrilik, PVC, dan komposit.</small></div></div>
-    <div class="feat"><span class="dot"></span><div><strong>Cutting Plasma</strong><br/><small>Besi plat, stainless, dan material logam lainnya.</small></div></div>
-    <div class="feat"><span class="dot"></span><div><strong>Laser Cutting & Engraving</strong><br/><small>Akrilik, kulit, karet, karton, kayu tipis, dan marking.</small></div></div>
-    <div class="feat"><span class="dot"></span><div><strong>Finishing & Rakit</strong><br/><small>Finishing dasar, chamfer, dan perakitan sederhana.</small></div></div>
-  </div>
-</section>
+    </header>
 
-<section class="section">
-  <h2>Keunggulan</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Presisi & Konsisten</h3>
-      <p>Akurasi tinggi untuk hasil yang rapi dan sesuai ukuran.</p>
-    </div>
-    <div class="card">
-      <h3>Cepat Dikerjakan</h3>
-      <p>Estimasi pengerjaan jelas, cocok untuk deadline proyek.</p>
-    </div>
-    <div class="card">
-      <h3>Konsultasi Desain</h3>
-      <p>Bantu persiapkan file (DXF, CDR, AI, SVG) hingga siap potong.</p>
-    </div>
-  </div>
-</section>
-
-<section id="lokasi" class="section contact">
-  <div>
-    <h2>Alamat & Kontak</h2>
-    <div class="card">
-      <p><strong>Sentra Ukir Jayapura</strong><br/>
-        Depan Gereja Baptis, BTN Skylen, Kotaraja<br/>
-        Jayapura, Papua
-      </p>
-      <p>Telepon/WA: <a href="https://wa.me/628114901407" target="_blank" rel="noopener">+62 811-4901-407</a></p>
-      <div class="cta">
-        <a class="btn primary" href="https://wa.me/628114901407?text=Halo%2C%20saya%20mau%20pesan%20jasa%20cutting" target="_blank" rel="noopener">Chat WhatsApp</a>
-        <a class="btn ghost" href="tel:+628114901407">Hubungi</a>
+    <section class="hero panel">
+      <div>
+        <h2>Cutting Presisi • Cepat • Rapi</h2>
+        <p>Kami melayani pemotongan bahan untuk kebutuhan signage, dekorasi, furniture, konstruksi, hingga industri kreatif. Terima file desain siap potong maupun jasa setting desain.</p>
+        <div class="hours">
+          <span class="pill">Jam buka: 08:00 – 17:00 WIT</span>
+          <span class="pill">Lokasi: Depan Gereja Baptis, BTN Skylen, Kotaraja</span>
+          <span class="pill">Jayapura, Papua</span>
+        </div>
+        <div style="margin-top:16px" class="cta">
+          <a class="btn primary" href="https://wa.me/628114901407?text=Halo%20Sentra%20Ukir%20Jayapura%2C%20mau%20tanya%20harga%20dan%20waktu%20pengerjaan" target="_blank" rel="noopener">Konsultasi via WhatsApp</a>
+          <a class="btn ghost" href="#lokasi">Lihat Lokasi</a>
+        </div>
       </div>
-    </div>
-  </div>
-  <div>
-    <h2>Peta Lokasi</h2>
-    <div class="card" style="padding:8px">
-      <iframe title="Peta Sentra Ukir Jayapura" loading="lazy" allowfullscreen
-        src="https://www.google.com/maps?q=Depan%20Gereja%20Baptis%20Btn%20Skylen%20Kotaraja%2C%20Jayapura&output=embed"></iframe>
-    </div>
-  </div>
-</section>
+      <div class="card">
+        <h3 style="margin-top:0">Layanan Kami</h3>
+        <div class="feat"><span class="dot"></span><div><strong>CNC Router</strong><br/><small>Kayu, MDF, triplek, akrilik, PVC, dan komposit.</small></div></div>
+        <div class="feat"><span class="dot"></span><div><strong>Cutting Plasma</strong><br/><small>Besi plat, stainless, dan material logam lainnya.</small></div></div>
+        <div class="feat"><span class="dot"></span><div><strong>Laser Cutting & Engraving</strong><br/><small>Akrilik, kulit, karet, karton, kayu tipis, dan marking.</small></div></div>
+        <div class="feat"><span class="dot"></span><div><strong>Finishing & Rakit</strong><br/><small>Finishing dasar, chamfer, dan perakitan sederhana.</small></div></div>
+      </div>
+    </section>
 
-<footer>
-  <div class="wrap" style="padding:0">
-    © <span id="year"></span> Sentra Ukir Jayapura • Jasa Cutting CNC | Plasma | Laser • Jam buka 08:00 – 17:00 WIT
-  </div>
-</footer>
+    <section class="section">
+      <h2>Keunggulan</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Presisi & Konsisten</h3>
+          <p>Akurasi tinggi untuk hasil yang rapi dan sesuai ukuran.</p>
+        </div>
+        <div class="card">
+          <h3>Cepat Dikerjakan</h3>
+          <p>Estimasi pengerjaan jelas, cocok untuk deadline proyek.</p>
+        </div>
+        <div class="card">
+          <h3>Konsultasi Desain</h3>
+          <p>Bantu persiapkan file (DXF, CDR, AI, SVG) hingga siap potong.</p>
+        </div>
+      </div>
+    </section>
 
+    <section id="lokasi" class="section contact">
+      <div>
+        <h2>Alamat & Kontak</h2>
+        <div class="card">
+          <p><strong>Sentra Ukir Jayapura</strong><br/>
+            Depan Gereja Baptis, BTN Skylen, Kotaraja<br/>
+            Jayapura, Papua
+          </p>
+          <p>Telepon/WA: <a href="https://wa.me/628114901407" target="_blank" rel="noopener">+62 811-4901-407</a></p>
+          <div class="cta">
+            <a class="btn primary" href="https://wa.me/628114901407?text=Halo%2C%20saya%20mau%20pesan%20jasa%20cutting" target="_blank" rel="noopener">Chat WhatsApp</a>
+            <a class="btn ghost" href="tel:+628114901407">Hubungi</a>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h2>Peta Lokasi</h2>
+        <div class="card" style="padding:8px">
+          <iframe title="Peta Sentra Ukir Jayapura" loading="lazy" allowfullscreen
+            src="https://www.google.com/maps?q=Depan%20Gereja%20Baptis%20Btn%20Skylen%20Kotaraja%2C%20Jayapura&output=embed"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrap" style="padding:0">
+        © <span id="year"></span> Sentra Ukir Jayapura • Jasa Cutting CNC | Plasma | Laser • Jam buka 08:00 – 17:00 WIT
+      </div>
+    </footer>
   </div>
+
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
