@@ -5,125 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SENTRA UKIR Jayapura</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      color: #000;
-      scroll-behavior: smooth;
-    }
-
-    /* Hero Section */
-    header {
-      background: url('https://via.placeholder.com/1600x600') no-repeat center center/cover;
-      color: #fff;
-      text-align: center;
-      padding: 6rem 1rem;
-      position: relative;
-    }
-    header h1 {
-      font-size: 3rem;
-      margin: 0;
-      color: #ff6600;
-      text-shadow: 2px 2px #000;
-    }
-    header p {
-      font-size: 1.5rem;
-      margin: 1rem 0 2rem 0;
-      text-shadow: 1px 1px #000;
-    }
-    header .btn {
-      background: #ff6600;
-      color: #000;
-      padding: 15px 30px;
-      border-radius: 8px;
-      font-weight: bold;
-      text-decoration: none;
-      transition: 0.3s;
-    }
-    header .btn:hover {
-      background: #000;
-      color: #ff6600;
-    }
-
-    /* Section styles */
-    section {
-      padding: 4rem 2rem;
-      text-align: center;
-    }
-    section h2 {
-      font-size: 2rem;
-      color: #ff6600;
-      margin-bottom: 2rem;
-    }
-    .services, .materials, .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1.5rem;
-    }
-    .card {
-      background: #f9f9f9;
-      padding: 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    }
-    .card img {
-      max-width: 100%;
-      border-radius: 10px;
-      margin-bottom: 1rem;
-    }
-
-    /* CTA */
-    .cta {
-      background: #ff6600;
-      color: #000;
-      padding: 2rem;
-    }
-    .cta a {
-      color: #000;
-      font-weight: bold;
-      text-decoration: none;
-      background: #fff;
-      padding: 15px 30px;
-      border-radius: 8px;
-      transition: 0.3s;
-    }
-    .cta a:hover {
-      background: #000;
-      color: #ff6600;
-    }
-
-    /* Google Maps iframe */
-    iframe {
-      width: 100%;
-      height: 300px;
-      border: 0;
-      border-radius: 10px;
-    }
-
-    /* Floating WhatsApp Button */
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25D366;
-      color: #fff;
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 30px;
-      text-decoration: none;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-      z-index: 100;
-      transition: 0.3s;
-    }
-    .whatsapp-float:hover {
-      transform: scale(1.1);
-    }
-
+    body { font-family: Arial, sans-serif; margin:0; padding:0; line-height:1.6; }
+    header { background: #0d6efd; color: white; padding: 60px 20px; text-align: center; }
+    header h1 { margin:0; font-size: 2.5em; }
+    header p { margin:10px 0 0; font-size: 1.2em; }
+    section { padding: 40px 20px; max-width: 1200px; margin: auto; }
+    h2 { text-align: center; margin-bottom: 30px; color: #0d6efd; }
+    .services, .gallery { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+    .service-item, .gallery-item { flex: 1 1 250px; background: #f4f4f4; padding: 20px; border-radius: 10px; text-align: center; }
+    .map { text-align: center; margin-top:20px; }
+    .cta-whatsapp { position: fixed; bottom: 20px; right: 20px; background: #25D366; color: white; border-radius: 50%; width: 60px; height: 60px; display:flex; align-items:center; justify-content:center; font-size: 30px; text-decoration:none; box-shadow: 0 4px 6px rgba(0,0,0,0.3); }
   </style>
 </head>
 <body>
@@ -131,68 +22,61 @@
   <!-- Hero Section -->
   <header>
     <h1>SENTRA UKIR Jayapura</h1>
-    <p>Spesialis Jasa Cutting CNC Router & Laser Plasma</p>
-    <a href="https://wa.me/628114901407" target="_blank" class="btn">Hubungi Kami</a>
+    <p>Jasa Cutting CNC, Router & Laser Plasma</p>
+    <p>Depan Gereja Baptis BTN | WA: +62 811-4901-407</p>
   </header>
 
-  <!-- Daftar Layanan -->
-  <section id="services">
+  <!-- Layanan -->
+  <section>
     <h2>Layanan Kami</h2>
     <div class="services">
-      <div class="card">
-        <h3>Cutting CNC Router</h3>
-        <p>Potong akrilik, MDF, kayu, dan material lainnya dengan presisi tinggi.</p>
+      <div class="service-item">
+        <h3>Cutting ACP</h3>
+        <p>Aluminium Composite Panel custom sesuai kebutuhan Anda.</p>
       </div>
-      <div class="card">
-        <h3>Cutting Laser</h3>
-        <p>Laser cutting untuk akrilik, PVC, triplex, dan berbagai material custom.</p>
+      <div class="service-item">
+        <h3>Cutting PVC BOARD</h3>
+        <p>Memotong PVC Board dengan presisi tinggi.</p>
       </div>
-      <div class="card">
-        <h3>Laser Plasma</h3>
-        <p>Potong plat besi, aluminium, dan logam lainnya sesuai desain.</p>
+      <div class="service-item">
+        <h3>Cutting TRIPLEX</h3>
+        <p>Triplex untuk berbagai proyek dekorasi dan industri.</p>
       </div>
-    </div>
-  </section>
-
-  <!-- Material -->
-  <section id="materials">
-    <h2>Material Yang Kami Layani</h2>
-    <div class="materials">
-      <div class="card">Akrilik</div>
-      <div class="card">MDF</div>
-      <div class="card">PVC</div>
-      <div class="card">Triplex</div>
-      <div class="card">ACP</div>
-      <div class="card">Plat Besi</div>
+      <div class="service-item">
+        <h3>Cutting MDF</h3>
+        <p>MDF sesuai desain, rapi dan presisi.</p>
+      </div>
     </div>
   </section>
 
   <!-- Galeri -->
-  <section id="gallery">
-    <h2>Galeri Hasil Kerja</h2>
+  <section>
+    <h2>Galeri</h2>
     <div class="gallery">
-      <div class="card"><img src="https://via.placeholder.com/400x300" alt="Galeri 1"></div>
-      <div class="card"><img src="https://via.placeholder.com/400x300" alt="Galeri 2"></div>
-      <div class="card"><img src="https://via.placeholder.com/400x300" alt="Galeri 3"></div>
-      <div class="card"><img src="https://via.placeholder.com/400x300" alt="Galeri 4"></div>
+      <div class="gallery-item">Foto 1 (Placeholder)</div>
+      <div class="gallery-item">Foto 2 (Placeholder)</div>
+      <div class="gallery-item">Foto 3 (Placeholder)</div>
+      <div class="gallery-item">Foto 4 (Placeholder)</div>
     </div>
   </section>
 
-  <!-- Peta Google Maps -->
-  <section id="location">
+  <!-- Lokasi -->
+  <section>
     <h2>Lokasi Kami</h2>
-    <p>Depan Gereja Baptis, BTN Skylen, Kotaraja - Jayapura</p>
-    <iframe src="https://www.google.com/maps?q=Depan+Gereja+Baptis+BTN+Skylen+Kotaraja+Jayapura&output=embed"></iframe>
+    <div class="map">
+      <iframe 
+        src="https://www.google.com/maps?q=Depan%20Gereja%20Baptis%20BTN%20Jayapura&output=embed" 
+        width="100%" 
+        height="450" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy">
+      </iframe>
+    </div>
   </section>
 
-  <!-- CTA -->
-  <section class="cta">
-    <h2>Hubungi Kami Sekarang</h2>
-    <a href="https://wa.me/628114901407" target="_blank">Chat via WhatsApp</a>
-  </section>
-
-  <!-- Floating WhatsApp -->
-  <a href="https://wa.me/628114901407" target="_blank" class="whatsapp-float">💬</a>
+  <!-- WhatsApp CTA -->
+  <a href="https://wa.me/628114901407" class="cta-whatsapp" target="_blank">💬</a>
 
 </body>
 </html>
