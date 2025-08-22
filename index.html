@@ -13,11 +13,19 @@
       color: #333;
     }
     header {
-      background: #222;
+      background: linear-gradient(to right, #222, #555);
       color: gold;
       text-align: center;
-      padding: 30px 20px;
+      padding: 50px 20px;
     }
+    header img {
+      max-width: 120px;
+      margin-bottom: 15px;
+      border-radius: 50%;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    }
+    header h1 { margin: 0; font-size: 2.2rem; }
+    header p { margin: 10px 0 0; font-size: 1.1rem; }
     nav {
       background: #444;
       padding: 10px;
@@ -39,10 +47,6 @@
       border-bottom: 2px solid gold;
       padding-bottom: 10px;
     }
-    .material-list {
-      list-style: square;
-      padding-left: 20px;
-    }
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -56,33 +60,26 @@
       padding: 10px;
       text-align: center;
     }
-    .gallery-item img {
-      max-width: 100%;
-      border-radius: 10px;
-    }
+    .gallery-item img { max-width: 100%; border-radius: 10px; }
     .contact {
       background: #222;
       color: white;
-      padding: 20px;
+      padding: 30px 20px;
       text-align: center;
     }
-    .whatsapp-btn, .instagram-btn {
+    .btn {
       display: inline-block;
       margin: 10px;
-      padding: 10px 20px;
-      border-radius: 5px;
+      padding: 12px 25px;
+      border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
       animation: pulse 1.5s infinite;
+      transition: transform 0.2s;
     }
-    .whatsapp-btn {
-      background: green;
-      color: white;
-    }
-    .instagram-btn {
-      background: #E1306C;
-      color: white;
-    }
+    .btn:hover { transform: scale(1.05); }
+    .whatsapp-btn { background: green; color: white; }
+    .instagram-btn { background: #E1306C; color: white; }
     @keyframes pulse {
       0% { transform: scale(1); }
       50% { transform: scale(1.1); }
@@ -100,13 +97,13 @@
 <body>
 
   <header>
+    <img src="inbound8047119737907725319.jpg" alt="Logo Sentra Ukir Jayapura">
     <h1>Sentra Ukir Jayapura</h1>
     <p>Jasa Cutting Laser | Router | Plasma</p>
   </header>
 
   <nav>
     <a href="#profil">Profil</a>
-    <a href="#material">Material</a>
     <a href="#galeri">Galeri</a>
     <a href="#kontak">Kontak</a>
   </nav>
@@ -114,14 +111,53 @@
   <section id="profil">
     <h2>Profil Usaha</h2>
     <p>
-      <b>Sentra Ukir Jayapura</b> adalah penyedia jasa cutting laser, router, dan plasma yang berlokasi di Jayapura.
-      Kami melayani berbagai kebutuhan ukir, potong, dan desain untuk keperluan dekorasi, industri, maupun periklanan.
-      Dengan tenaga ahli berpengalaman serta mesin modern, kami memastikan hasil pekerjaan yang presisi, rapi, dan berkualitas.
+      <b>Sentra Ukir Jayapura</b> adalah penyedia jasa cutting laser, router, dan plasma di Papua.
+      Kami melayani pembuatan huruf timbul, papan reklame, ukiran interior, panel dekoratif,
+      serta berbagai kebutuhan custom berbahan akrilik, ACP, MDF, besi, stainless, dan material lainnya.
     </p>
     <p>
-      Kami melayani pembuatan huruf timbul, ukiran dekoratif, papan reklame, panel interior, hingga berbagai kebutuhan custom sesuai permintaan pelanggan.
+      Dengan tenaga ahli berpengalaman dan mesin modern, kami menghadirkan hasil potongan presisi, rapi, dan sesuai desain.
     </p>
   </section>
 
-  <section id="material">
-    <
+  <section id="galeri">
+    <h2>Galeri Pekerjaan</h2>
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="inbound2731849528069688340.jpg" alt="Proyek 1">
+        <p>Huruf timbul akrilik untuk toko.</p>
+      </div>
+      <div class="gallery-item">
+        <img src="inbound5947923098640507716.jpg" alt="Proyek 2">
+        <p>Papan reklame finishing ACP.</p>
+      </div>
+      <div class="gallery-item">
+        <img src="inbound5932443689179049655.jpg" alt="Proyek 3">
+        <p>Ukiran dekoratif panel interior.</p>
+      </div>
+      <div class="gallery-item">
+        <img src="inbound7592669673276280992.jpg" alt="Proyek 4">
+        <p>Cutting plat besi custom CNC plasma.</p>
+      </div>
+      <div class="gallery-item">
+        <img src="inbound8047119737907725319.jpg" alt="Proyek 5">
+        <p>Logo akrilik dengan laser cutting presisi.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="kontak" class="contact">
+    <h2>Kontak & Lokasi</h2>
+    <p><b>Alamat:</b> Meco Prima Btn Skyline Indah, Wai Mhorock, Kec. Abepura, Kota Jayapura, Papua 99225</p>
+    <a href="https://wa.me/628114901407" target="_blank" class="btn whatsapp-btn">Hubungi via WhatsApp</a>
+    <a href="https://instagram.com/" target="_blank" class="btn instagram-btn">Instagram Kami</a>
+    
+    <!-- Google Maps Embed -->
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31909.193777270425!2d140.6666!3d-2.5916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x68247f2b9e3043d%3A0x3e9186458cd5e0c7!2sMeco%20Prima%20Skyline%20Indah%2C%20Abepura%2C%20Jayapura!5e0!3m2!1sid!2sid!4v1692627764000!5m2!1sid!2sid" 
+      allowfullscreen="" loading="lazy">
+    </iframe>
+  </section>
+
+</body>
+</html>
