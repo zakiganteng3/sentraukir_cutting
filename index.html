@@ -44,19 +44,8 @@
       animation: fadeUp 1s forwards;
       animation-delay: 1.6s;
     }
-
-    @keyframes zoomIn {
-      to {
-        opacity: 1;
-        transform: scale(1);
-      }
-    }
-    @keyframes fadeUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+    @keyframes zoomIn { to { opacity: 1; transform: scale(1);} }
+    @keyframes fadeUp { to { opacity: 1; transform: translateY(0);} }
 
     nav {
       background: #222;
@@ -70,12 +59,11 @@
       font-weight: bold;
       transition: 0.3s;
     }
-    nav a:hover {
-      color: #fff;
-    }
+    nav a:hover { color: #fff; }
+
     .container {
       padding: 40px 20px;
-      max-width: 1000px;
+      max-width: 1100px;
       margin: auto;
     }
     .btn {
@@ -93,50 +81,26 @@
       color: gold;
       transform: scale(1.05);
     }
-    .profil {
-      text-align: center;
-      margin-bottom: 50px;
-    }
-    .profil h2 {
-      font-size: 24px;
-      margin-bottom: 10px;
-    }
-    .maps {
-      margin-top: 30px;
-      text-align: center;
-    }
-    .maps iframe {
-      width: 100%;
-      height: 350px;
-      border: none;
-      border-radius: 10px;
-    }
+    .profil { text-align: center; margin-bottom: 50px; }
+    .profil h2 { font-size: 26px; margin-bottom: 15px; }
+
     .galeri {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 15px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
     }
     .galeri-item {
       background: #fff;
       border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       overflow: hidden;
       text-align: center;
-      transition: transform 0.3s;
+      transition: 0.3s;
     }
-    .galeri-item:hover {
-      transform: scale(1.03);
-    }
-    .galeri-item img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
-    .galeri-item p {
-      padding: 10px;
-      font-size: 14px;
-      color: #444;
-    }
+    .galeri-item:hover { transform: scale(1.03); }
+    .galeri-item img { width: 100%; height: auto; }
+    .galeri-item p { padding: 10px; font-size: 15px; }
+
     footer {
       background: #111;
       color: #ccc;
@@ -149,7 +113,7 @@
 <body>
 
   <header>
-    <img src="data:image/jpeg;base64,/9j/4QBYRXhpZgAATU0AKgAAAAgABAEAAAQAAAABAAAC0AEBAAQAAAABAAAC0IdpAAQAAAABAAAAPgESAAQAAAABAAAAAAAAAAAAAZIIAAQAAAABAAAAAAAAAAD/4AAQSkZJRgABAQAAAQABAAD/4gIoSUNDX1BST0ZJTEUAAQEAAAIYAAAAAAIQAABtbnRyUkdCIFhZWiAAAAAAAAAAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tY..." alt="Logo Sentra Ukir Jayapura">
+    <img src="data:image/jpeg;base64,....(base64 logo)..." alt="Logo Sentra Ukir Jayapura">
     <h1>Sentra Ukir Jayapura</h1>
     <p>Jasa Cutting Laser | Router | Plasma</p>
   </header>
@@ -163,16 +127,15 @@
   <div class="container" id="profil">
     <div class="profil">
       <h2>Profil Usaha</h2>
-      <p>Kami adalah <b>Sentra Ukir Jayapura</b>, penyedia jasa cutting Laser, Router, dan Plasma profesional di Jayapura. 
-      Dengan pengalaman dan kualitas terbaik, kami siap melayani berbagai kebutuhan ukiran, pemotongan material, dan dekorasi sesuai permintaan Anda.</p>
-      <p><b>Alamat:</b> Meco Prima Btn Skylen, Jayapura, Papua</p>
+      <p>Kami adalah <b>Sentra Ukir Jayapura</b>, penyedia jasa cutting <b>Laser, Router, dan Plasma</b> yang berdiri untuk memenuhi kebutuhan industri, konstruksi, dan dekorasi di Papua. 
+      Kami berpengalaman mengerjakan berbagai proyek dengan presisi tinggi, kualitas terbaik, dan hasil cepat.</p>
+      <p><b>Material yang kami gunakan:</b> Akrilik, MDF, PVC, ACP (Aluminium Composite Panel), Plat Besi, Stainless Steel, Kayu, hingga material dekoratif lainnya sesuai permintaan pelanggan.</p>
+      <p><b>Alamat:</b> Meco Prima Btn Skyline Indah, Wai Mhorock, Kec. Abepura, Kota Jayapura, Papua 99225</p>
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63831.893...etc"
+        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe><br><br>
       <a href="https://wa.me/628114901407" class="btn" target="_blank">Hubungi via WhatsApp</a>
-    </div>
-
-    <!-- Google Maps -->
-    <div class="maps">
-      <h3>Lokasi Kami</h3>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63743.31549939286!2d140.64808!3d-2.591602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x686cf50f3d1bb1b5%3A0x3039d80b220ce50!2sJayapura%2C%20Papua!5e0!3m2!1sid!2sid!4v1691928170000!5m2!1sid!2sid" allowfullscreen="" loading="lazy"></iframe>
     </div>
   </div>
 
@@ -180,20 +143,20 @@
     <h2 style="text-align:center;">Galeri Pekerjaan</h2>
     <div class="galeri">
       <div class="galeri-item">
-        <img src="https://via.placeholder.com/400x250?text=Cutting+Laser" alt="Cutting Laser">
-        <p>Contoh hasil cutting laser akrilik untuk kebutuhan dekorasi.</p>
+        <img src="https://via.placeholder.com/400x250?text=Laser+Cutting+Akrilik" alt="Laser Cutting Akrilik">
+        <p>Pekerjaan laser cutting akrilik untuk kebutuhan dekorasi modern.</p>
       </div>
       <div class="galeri-item">
-        <img src="https://via.placeholder.com/400x250?text=Cutting+Router" alt="Cutting Router">
-        <p>Pekerjaan router CNC pada MDF dengan detail presisi tinggi.</p>
+        <img src="https://via.placeholder.com/400x250?text=Router+MDF" alt="Router MDF">
+        <p>Pemotongan MDF dengan router CNC presisi tinggi untuk furnitur custom.</p>
       </div>
       <div class="galeri-item">
-        <img src="https://via.placeholder.com/400x250?text=Cutting+Plasma" alt="Cutting Plasma">
-        <p>Cutting plasma untuk plat besi sesuai desain yang diinginkan.</p>
+        <img src="https://via.placeholder.com/400x250?text=Plasma+Besi" alt="Plasma Cutting Besi">
+        <p>Proyek pemotongan plat besi menggunakan plasma cutting dengan hasil rapi.</p>
       </div>
       <div class="galeri-item">
-        <img src="https://via.placeholder.com/400x250?text=Ukiran+Custom" alt="Ukiran Custom">
-        <p>Ukiran custom sesuai permintaan pelanggan untuk branding usaha.</p>
+        <img src="https://via.placeholder.com/400x250?text=ACP+Panel" alt="Cutting ACP">
+        <p>Pemasangan dan cutting ACP (Aluminium Composite Panel) untuk bangunan.</p>
       </div>
     </div>
   </div>
