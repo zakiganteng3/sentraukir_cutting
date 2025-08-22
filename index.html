@@ -1,326 +1,179 @@
-<!DOCTYPE html><html lang="id">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sentra Ukir Jayapura — Jasa Cutting CNC Laser | Router | Plasma</title>
-  <meta name="description" content="Sentra Ukir Jayapura: Jasa cutting CNC Laser, CNC Router, CNC Plasma, engraving & custom signage. Lokasi: Meco Prima, BTN Skylen, Kotaraja. WA +62 811-4901-407."/>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg: #070a0f;
-      --card: #0e1420;
-      --muted: #8ea1c0;
-      --text: #eaf0ff;
-      --grad1: #35a1ff;
-      --grad2: #9b5cff;
-      --accent: #36f3c7;
-      --warn: #ffd166;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0; font-family:'Plus Jakarta Sans',system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,'Noto Sans',sans-serif;
-      color:var(--text); background: radial-gradient(1200px 600px at 80% -10%, #1b2338 0%, transparent 60%),
-                 radial-gradient(900px 600px at -20% 10%, #0d1322 0%, transparent 60%), var(--bg);
-      overflow-x:hidden;
-    }
-    /* ===== Utility ===== */
-    .container{width:min(1120px, 92vw); margin-inline:auto}
-    .grid{display:grid; gap:24px}
-    .btn{display:inline-flex; align-items:center; gap:10px; padding:14px 18px; border-radius:14px; border:1px solid #2a3550; background:#0f1626; color:var(--text); text-decoration:none; font-weight:700; letter-spacing:.2px; position:relative; overflow:hidden}
-    .btn:hover{transform:translateY(-1px)}
-    .btn.primary{background:linear-gradient(135deg,var(--grad1),var(--grad2)); border-color:transparent; color:white}
-    .btn.ghost{background:transparent}
-    .chip{display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border-radius:999px; border:1px solid #2a3550; color:#cfe0ff; background:rgba(255,255,255,.04)}
-    .card{background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.08); box-shadow:0 10px 40px rgba(0,0,0,.3); border-radius:20px}
-    .glass{backdrop-filter: blur(10px); background: rgba(13,19,34,.5)}
-    .muted{color:var(--muted)}
-    .center{text-align:center}
-    .section{padding:80px 0}
-    .small{font-size:14px}
-    .hide{display:none}/* ===== Header ===== */
-header{position:sticky; top:0; z-index:50; backdrop-filter:saturate(140%) blur(8px); background:rgba(5,9,16,.45); border-bottom:1px solid rgba(255,255,255,.06)}
-.nav{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
-.nav .left{display:flex; align-items:center; gap:14px}
-.nav .right{display:flex; align-items:center; gap:10px}
-.nav a{color:#cfe0ff; text-decoration:none; padding:10px 12px; border-radius:10px}
-.nav a:hover{background:rgba(255,255,255,.06)}
+<!doctype html>
 
-/* ===== Logo (inline SVG) ===== */
-.logo{display:flex; align-items:center; gap:10px}
-.logo svg{width:42px; height:42px}
-.logo .brand{font-weight:800; letter-spacing:.3px}
-.logo .sub{font-weight:600; font-size:12px; color:var(--muted)}
-
-/* ===== Hero ===== */
-.hero{position:relative; padding:110px 0 80px}
-.hero .bg-canvas{position:absolute; inset:0; z-index:-2}
-.hero .glow{position:absolute; inset:-10% -10% auto -10%; height:60vh; background:radial-gradient(60% 60% at 50% 50%, rgba(53,161,255,.25), transparent 70%), radial-gradient(60% 60% at 30% 70%, rgba(155,92,255,.18), transparent 70%); filter:blur(40px); z-index:-3}
-.hero h1{margin:10px 0 14px; font-size:clamp(28px, 5vw, 56px); line-height:1.05}
-.hero p{margin:0 0 24px; font-size:clamp(14px,2.2vw,18px)}
-.hero-cta{display:flex; gap:12px; flex-wrap:wrap}
-
-/* Floating Tools */
-.float{position:absolute; opacity:.6; animation: drift 16s infinite ease-in-out}
-.float:nth-child(1){top:16%; left:6%; animation-delay:0s}
-.float:nth-child(2){top:22%; right:10%; animation-delay:2.5s}
-.float:nth-child(3){bottom:14%; left:14%; animation-delay:5s}
-.float:nth-child(4){bottom:10%; right:20%; animation-delay:7s}
-@keyframes drift{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-12px) rotate(6deg)}}
-
-/* ===== Services ===== */
-.services{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
-.service{padding:20px}
-.service h3{margin:12px 0 6px}
-.service .icon{width:46px; height:46px; border-radius:12px; display:grid; place-items:center; background:linear-gradient(135deg, rgba(53,161,255,.3), rgba(155,92,255,.3)); border:1px solid rgba(255,255,255,.18)}
-
-/* ===== Portfolio ===== */
-.portfolio{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
-.tile{position:relative; aspect-ratio:4/3; border-radius:18px; overflow:hidden; border:1px solid rgba(255,255,255,.1)}
-.tile .ph{position:absolute; inset:0; background:repeating-linear-gradient(45deg, rgba(255,255,255,.05), rgba(255,255,255,.05) 8px, rgba(255,255,255,.02) 8px, rgba(255,255,255,.02) 16px)}
-.tile .badge{position:absolute; left:12px; top:12px}
-.tile .cap{position:absolute; inset:auto 0 0 0; padding:12px 14px; background:linear-gradient(180deg, transparent, rgba(0,0,0,.7)); font-weight:600}
-
-/* ===== Stats ===== */
-.stats{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
-.stat{padding:22px; text-align:center}
-.big{font-size:40px; font-weight:800}
-
-/* ===== Testimoni ===== */
-.carousel{position:relative}
-.slides{display:flex; gap:18px; overflow:hidden}
-.slide{min-width:calc(50% - 9px); padding:20px}
-@media (max-width:800px){.slide{min-width:100%}}
-
-/* ===== CTA Section ===== */
-.cta{padding:60px; border-radius:24px; background:linear-gradient(135deg, rgba(53,161,255,.25), rgba(155,92,255,.25)); border:1px solid rgba(255,255,255,.18)}
-
-/* ===== Footer ===== */
-footer{padding:40px 0; border-top:1px solid rgba(255,255,255,.08); color:#b9c9ea}
-.foot{display:flex; gap:16px; align-items:center; justify-content:space-between; flex-wrap:wrap}
-.social{display:flex; gap:12px}
-.social a{display:grid; place-items:center; width:38px; height:38px; border-radius:12px; border:1px solid rgba(255,255,255,.18); color:#e4ecff; text-decoration:none}
-
-/* ===== Reveal on Scroll ===== */
-.reveal{opacity:0; transform:translateY(18px); transition:opacity .7s ease, transform .7s ease}
-.reveal.show{opacity:1; transform:none}
-
-/* Ripple Buttons */
-.btn.ripple{position:relative; overflow:hidden}
-.btn.ripple span.r{position:absolute; border-radius:50%; transform:scale(0); animation:ripple .7s linear; background:rgba(255,255,255,.35)}
-@keyframes ripple{to{transform:scale(12); opacity:0}}
-
-/* Tooltip mini */
-.tip{position:relative}
-.tip:hover::after{content:attr(data-tip); position:absolute; bottom:120%; left:50%; transform:translateX(-50%); background:#0b1020; color:#cfe0ff; padding:8px 10px; font-size:12px; white-space:nowrap; border:1px solid rgba(255,255,255,.12); border-radius:8px}
-
-  </style>
-</head>
-<body>
-  <!-- Header -->
-  <header>
-    <div class="container nav">
-      <div class="left logo">
-        <!-- Inline SVG Logo: SUJ Monogram -->
-        <svg viewBox="0 0 64 64" aria-label="Logo Sentra Ukir Jayapura" role="img">
-          <defs>
-            <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stop-color="#35a1ff"/>
-              <stop offset="100%" stop-color="#9b5cff"/>
-            </linearGradient>
-          </defs>
-          <rect x="2" y="2" width="60" height="60" rx="14" fill="url(#g)" opacity=".35" stroke="url(#g)"/>
-          <path d="M15 36c0-8 6-14 14-14h8" stroke="#36f3c7" stroke-width="5" fill="none" stroke-linecap="round"/>
-          <path d="M27 49h10c6 0 10-4 10-10V20" stroke="#eaf0ff" stroke-width="5" fill="none" stroke-linecap="round"/>
-          <circle cx="48" cy="17" r="3" fill="#ffd166"/>
-        </svg>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sentra Ukir Jayapura — Profil & Kontak</title>
+    <meta name="description" content="Sentra Ukir Jayapura • Jasa cutting CNC, laser, router & plasma. Hubungi via Instagram, WhatsApp, dan Facebook." />
+    <meta property="og:title" content="Sentra Ukir Jayapura — Profil & Kontak" />
+    <meta property="og:description" content="Jasa cutting CNC, laser, router & plasma. Klik untuk terhubung lewat Instagram, WhatsApp, atau Facebook." />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#0ea5e9" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🪵</text></svg>"> 
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Font fallback for clean look */
+      :root { --ring: 0 0% 100%; }
+      @media (prefers-color-scheme: dark) {
+        html { color-scheme: dark; }
+      }
+      .glass { backdrop-filter: blur(10px); background: rgba(255,255,255,.06); }
+      .shine { background-image: linear-gradient(120deg, rgba(255,255,255,.25), rgba(255,255,255,0)); background-size: 200% 100%; }
+    </style>
+  </head>
+  <body class="min-h-screen bg-gradient-to-br from-sky-50 via-white to-sky-100 text-slate-800 dark:from-slate-900 dark:via-slate-950 dark:to-slate-900 dark:text-slate-100">
+    <!-- Header -->
+    <header class="max-w-5xl mx-auto px-6 py-6 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="size-10 grid place-content-center rounded-2xl bg-sky-500/10 ring-1 ring-sky-500/30">
+          <span class="text-2xl">🪵</span>
+        </div>
         <div>
-          <div class="brand">Sentra Ukir Jayapura</div>
-          <div class="sub">Jasa Cutting • Laser • Router • Plasma</div>
+          <h1 class="text-xl font-semibold tracking-tight">Sentra Ukir Jayapura</h1>
+          <p class="text-xs opacity-70">Jasa Cutting CNC • Laser • Router • Plasma</p>
         </div>
       </div>
-      <nav class="right small">
-        <a href="#layanan">Layanan</a>
-        <a href="#portofolio">Portofolio</a>
-        <a href="#kontak">Kontak</a>
-        <a class="btn primary tip" data-tip="Chat WhatsApp" href="https://wa.me/628114901407?text=Halo%20Sentra%20Ukir%20Jayapura%2C%20saya%20ingin%20tanya%20harga%20jasa%20cutting" target="_blank" rel="noopener">WhatsApp</a>
-      </nav>
+      <a href="#kontak" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-sky-600 text-white hover:bg-sky-700 transition focus:outline-none focus:ring-2 focus:ring-sky-400">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12H2"/><path d="m15 5 7 7-7 7"/></svg>
+        Kontak Cepat
+      </a>
+    </header><!-- Hero -->
+<section class="relative max-w-5xl mx-auto px-6 py-10 sm:py-16">
+  <div class="absolute inset-0 -z-10 blur-3xl opacity-30 pointer-events-none" aria-hidden>
+    <div class="size-64 rounded-full bg-sky-300/40 absolute -top-10 -left-6"></div>
+    <div class="size-72 rounded-full bg-indigo-300/30 absolute bottom-0 right-0"></div>
+  </div>
+
+  <div class="grid md:grid-cols-2 gap-8 items-center">
+    <div>
+      <h2 class="text-3xl sm:text-4xl font-bold leading-tight">Ukiran Presisi, Hasil Rapi, <span class="text-sky-600">Siap Kirim</span></h2>
+      <p class="mt-4 text-base sm:text-lg opacity-80">Spesialis cutting untuk <strong>kayu, akrilik, MDF, besi & aluminium</strong>. Cocok untuk signage, panel dekorasi, interior, dan kebutuhan industri.</p>
+      <div class="mt-6 flex flex-wrap gap-3">
+        <a href="#kontak" class="inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-sky-600 text-white hover:bg-sky-700 transition focus:outline-none focus:ring-2 focus:ring-sky-400">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12H2"/><path d="m15 5 7 7-7 7"/></svg>
+          Lihat Kontak
+        </a>
+        <a href="#layanan" class="inline-flex items-center gap-2 px-5 py-3 rounded-2xl border border-slate-300/50 hover:border-sky-400/60 hover:text-sky-600 transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4m0-4h.01"/></svg>
+          Layanan
+        </a>
+      </div>
+      <p class="mt-6 text-sm opacity-70">Alamat: <strong>Meco Prima, BTN Skylen, Kotaraja — Jayapura</strong></p>
     </div>
-  </header>  <!-- Hero -->  <section class="hero">
-    <canvas id="bg" class="bg-canvas" aria-hidden="true"></canvas>
-    <div class="glow" aria-hidden="true"></div>
-    <!-- Floating tool icons -->
-    <svg class="float" width="80" viewBox="0 0 24 24"><path fill="currentColor" d="M2 7l10-5l10 5v10l-10 5L2 17V7Zm10-3.2L5.47 7L12 10.2L18.53 7L12 3.8Zm8 5.02l-8 4l-8-4V17l8 4l8-4V9.82Z"/></svg>
-    <svg class="float" width="90" viewBox="0 0 24 24"><path fill="currentColor" d="M7 21q-.825 0-1.412-.587T5 19V7h2v12h8v2H7Zm4-4q-.825 0-1.412-.587T9 15V5q0-.825.588-1.413T11 3h6q.825 0 1.413.587T19 5v10q0 .825-.587 1.413T17 17h-6Zm0-2h6V5h-6v10Z"/></svg>
-    <svg class="float" width="72" viewBox="0 0 24 24"><path fill="currentColor" d="M2 12L12 2l10 10l-2 2l-2-2v8H6v-8l-2 2l-2-2Zm8 8h4v-6h-4v6Z"/></svg>
-    <svg class="float" width="70" viewBox="0 0 24 24"><path fill="currentColor" d="M3 3h18v2H3V3Zm2 4h14l-1.5 12.5q-.1.85-.738 1.425T15.3 21H8.7q-.85 0-1.487-.575T6.475 19.5L5 7Zm4 3v8h2v-8H9Zm4 0v8h2v-8h-2Z"/></svg>
-    <div class="container">
-      <div class="chip">⌛ Cepat • 🎯 Presisi • 💡 Custom</div>
-      <h1 class="reveal">Spesialis Cutting & Engraving<br/>untuk Bisnis, Arsitektur, & Hobi</h1>
-      <p class="muted reveal" style="max-width:720px">Kami mengerjakan laser cutting akrilik & MDF, CNC router kayu & ACP, CNC plasma besi, hingga engraving custom. Konsultasi gratis, siap produksi satuan & massal.</p>
-      <div class="hero-cta reveal">
-        <a class="btn primary ripple" href="https://wa.me/628114901407?text=Halo%20Sentra%20Ukir%20Jayapura%2C%20saya%20ingin%20order%20jasa%20cutting" target="_blank" rel="noopener">Pesan via WhatsApp</a>
-        <a class="btn ghost ripple" href="#portofolio">Lihat Portofolio</a>
+    <div class="glass rounded-3xl p-5 ring-1 ring-white/10 shadow-xl">
+      <div class="aspect-video w-full rounded-2xl overflow-hidden bg-gradient-to-br from-slate-200 to-slate-100 dark:from-slate-800 dark:to-slate-700 grid place-content-center">
+        <div class="text-center p-6">
+          <p class="text-sm uppercase tracking-widest opacity-60">Portfolio Kilat</p>
+          <h3 class="text-2xl font-semibold mt-1">CNC • Laser • Router • Plasma</h3>
+          <p class="mt-3 opacity-75">Contoh pola ukiran, panel ventilasi, dan signage siap produksi.</p>
+        </div>
       </div>
+      <ul class="mt-5 grid grid-cols-2 gap-3 text-sm">
+        <li class="p-4 rounded-2xl ring-1 ring-slate-200/50 dark:ring-white/10 bg-white/60 dark:bg-white/5">Signage Toko</li>
+        <li class="p-4 rounded-2xl ring-1 ring-slate-200/50 dark:ring-white/10 bg-white/60 dark:bg-white/5">Panel Dekorasi</li>
+        <li class="p-4 rounded-2xl ring-1 ring-slate-200/50 dark:ring-white/10 bg-white/60 dark:bg-white/5">Kusen & Ornamen</li>
+        <li class="p-4 rounded-2xl ring-1 ring-slate-200/50 dark:ring-white/10 bg-white/60 dark:bg-white/5">Proyek Industri</li>
+      </ul>
     </div>
-  </section>  <!-- Layanan -->  <section id="layanan" class="section container">
-    <h2 class="reveal" style="margin:0 0 8px; font-size:34px">Layanan Unggulan</h2>
-    <p class="muted reveal" style="margin:0 0 24px">Material umum: akrilik, MDF, kayu, ACP, aluminium, besi, stainless, kulit, dll.</p>
-    <div class="grid services">
-      <div class="card service reveal">
-        <div class="icon">🔦</div>
-        <h3>Laser Cutting & Engraving</h3>
-        <p class="muted">Akrilik, MDF, kulit, karet stempel, mdf inlay, box & display akrilik, gift personal.</p>
-      </div>
-      <div class="card service reveal">
-        <div class="icon">🪚</div>
-        <h3>CNC Router</h3>
-        <p class="muted">Panel dekor, kaligrafi ukir, 3D relief, signage huruf timbul, kabinet & part furniture.</p>
-      </div>
-      <div class="card service reveal">
-        <div class="icon">⚙️</div>
-        <h3>CNC Plasma</h3>
-        <p class="muted">Cutting plat besi & stainless, tralis motif, bracket custom, part teknik.</p>
-      </div>
-      <div class="card service reveal">
-        <div class="icon">🎨</div>
-        <h3>Desain & Finishing</h3>
-        <p class="muted">Dari sketsa ke produksi. Cat, laminasi, pemasangan di lokasi—bisa bantu full.</p>
-      </div>
+  </div>
+</section>
+
+<!-- Layanan -->
+<section id="layanan" class="max-w-5xl mx-auto px-6 py-12">
+  <h3 class="text-2xl font-bold">Layanan Kami</h3>
+  <p class="mt-2 opacity-80">Pengerjaan presisi dengan mesin terkalibrasi dan tim berpengalaman.</p>
+  <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+    <div class="p-5 rounded-2xl border border-slate-200/60 dark:border-white/10 bg-white/70 dark:bg-white/5">
+      <h4 class="font-semibold">CNC Cutting</h4>
+      <p class="text-sm opacity-75 mt-1">Kayu, MDF, PVC, ACP, akrilik.</p>
     </div>
-  </section>  <!-- Portofolio -->  <section id="portofolio" class="section container">
-    <div style="display:flex; align-items:end; justify-content:space-between; gap:16px; flex-wrap:wrap">
+    <div class="p-5 rounded-2xl border border-slate-200/60 dark:border-white/10 bg-white/70 dark:bg-white/5">
+      <h4 class="font-semibold">Laser Cutting</h4>
+      <p class="text-sm opacity-75 mt-1">Akrilik & logam tipis, tepi rapi.</p>
+    </div>
+    <div class="p-5 rounded-2xl border border-slate-200/60 dark:border-white/10 bg-white/70 dark:bg-white/5">
+      <h4 class="font-semibold">CNC Router</h4>
+      <p class="text-sm opacity-75 mt-1">Relief, ukir 2.5D, panel dekorasi.</p>
+    </div>
+    <div class="p-5 rounded-2xl border border-slate-200/60 dark:border-white/10 bg-white/70 dark:bg-white/5">
+      <h4 class="font-semibold">CNC Plasma</h4>
+      <p class="text-sm opacity-75 mt-1">Plat besi & aluminium, kuat & presisi.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Kontak & Sosial -->
+<section id="kontak" class="max-w-5xl mx-auto px-6 py-12">
+  <div class="rounded-3xl p-6 sm:p-8 border border-slate-200/60 dark:border-white/10 bg-white/70 dark:bg-white/5">
+    <h3 class="text-2xl font-bold">Terhubung dengan Kami</h3>
+    <p class="mt-2 opacity-80">Klik salah satu tombol di bawah untuk menghubungi via aplikasi favorit Anda.</p>
+
+    <div class="mt-6 grid sm:grid-cols-3 gap-4">
+      <!-- Instagram -->
+      <a href="https://instagram.com/sentraukirjayapura" target="_blank" rel="noopener" class="group flex items-center gap-3 p-4 rounded-2xl ring-1 ring-slate-200/60 dark:ring-white/10 hover:ring-sky-400/70 transition bg-white/70 dark:bg-white/5">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6"><path fill="currentColor" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3a6 6 0 1 1 0 12a6 6 0 0 1 0-12Zm0 2a4 4 0 1 0 0 8a4 4 0 0 0 0-8Zm5.5-.75a1.25 1.25 0 1 1 0 2.5a1.25 1.25 0 0 1 0-2.5Z"/></svg>
+        <div>
+          <p class="font-semibold leading-none">Instagram</p>
+          <p class="text-xs opacity-70 leading-none mt-1">@sentraukirjayapura</p>
+        </div>
+        <span class="ml-auto opacity-0 group-hover:opacity-100 transition">→</span>
+      </a>
+
+      <!-- WhatsApp -->
+      <a href="https://wa.me/628114901407?text=Halo%20Sentra%20Ukir%20Jayapura%2C%20saya%20ingin%20tanya%20jasa%20cutting." target="_blank" rel="noopener" class="group flex items-center gap-3 p-4 rounded-2xl ring-1 ring-slate-200/60 dark:ring-white/10 hover:ring-green-500/70 transition bg-white/70 dark:bg-white/5">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6"><path fill="currentColor" d="M20.52 3.48A11.94 11.94 0 0 0 12.06 0C5.46 0 .09 5.37.09 12c0 2.11.54 4.19 1.56 6.02L0 24l6.17-1.61A12.02 12.02 0 0 0 12.06 24c6.63 0 12-5.37 12-12c0-3.2-1.25-6.21-3.54-8.52ZM12.06 22a9.98 9.98 0 0 1-5.08-1.39l-.36-.21l-3.66.95l.98-3.56l-.24-.37A9.94 9.94 0 0 1 2.06 12C2.06 6.48 6.54 2 12.06 2S22.06 6.48 22.06 12S17.58 22 12.06 22Zm5.73-6.87c-.31-.16-1.83-.9-2.11-1c-.28-.1-.49-.16-.7.16c-.2.31-.8 1-1 1.21c-.19.21-.37.24-.68.08c-.31-.16-1.32-.49-2.51-1.56c-.93-.83-1.56-1.85-1.75-2.16c-.19-.31-.02-.48.14-.64c.14-.13.31-.33.46-.49c.16-.17.21-.28.31-.49c.1-.21.05-.4-.02-.56c-.08-.16-.7-1.68-.96-2.3c-.25-.6-.51-.52-.7-.52h-.6c-.2 0-.52.08-.8.4c-.28.31-1.06 1.04-1.06 2.52c0 1.49 1.09 2.93 1.24 3.13c.16.2 2.14 3.26 5.18 4.56c.72.31 1.28.48 1.72.62c.72.23 1.37.19 1.89.12c.58-.09 1.83-.75 2.09-1.48c.26-.73.26-1.35.18-1.48c-.08-.13-.28-.21-.58-.36Z"/></svg>
+        <div>
+          <p class="font-semibold leading-none">WhatsApp</p>
+          <p class="text-xs opacity-70 leading-none mt-1">+62 811-4901-407</p>
+        </div>
+        <span class="ml-auto opacity-0 group-hover:opacity-100 transition">→</span>
+      </a>
+
+      <!-- Facebook -->
+      <a href="https://facebook.com/sentraukirjayapura" target="_blank" rel="noopener" class="group flex items-center gap-3 p-4 rounded-2xl ring-1 ring-slate-200/60 dark:ring-white/10 hover:ring-blue-600/70 transition bg-white/70 dark:bg-white/5">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6"><path fill="currentColor" d="M13 22v-8h3l1-4h-4V8a1 1 0 0 1 1-1h3V3h-3a5 5 0 0 0-5 5v2H6v4h3v8z"/></svg>
+        <div>
+          <p class="font-semibold leading-none">Facebook</p>
+          <p class="text-xs opacity-70 leading-none mt-1">Sentra Ukir Jayapura</p>
+        </div>
+        <span class="ml-auto opacity-0 group-hover:opacity-100 transition">→</span>
+      </a>
+    </div>
+
+    <div class="mt-6 text-sm opacity-70">
+      <p>Jam layanan: Senin–Sabtu, 09.00–17.00 WIT</p>
+      <p class="mt-1">* Ganti tautan/username sesuai akun Anda bila berbeda.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA footer -->
+<footer class="max-w-5xl mx-auto px-6 pb-14">
+  <div class="rounded-3xl p-6 sm:p-8 bg-gradient-to-r from-sky-600 to-blue-600 text-white shadow-lg">
+    <div class="flex flex-col sm:flex-row sm:items-center gap-4 justify-between">
       <div>
-        <h2 class="reveal" style="margin:0 0 8px; font-size:34px">Portofolio</h2>
-        <p class="muted reveal">Karya pilihan. Slide untuk lihat lainnya.</p>
+        <h4 class="text-xl font-semibold">Siap mulai proyek Anda?</h4>
+        <p class="opacity-90">Kirim ukuran, bahan, dan deadline—kami hitung estimasinya.</p>
       </div>
-      <div class="chip tip" data-tip="File siap cetak & produksi">✅ File Siap Produksi</div>
-    </div>
-    <div class="grid portfolio" style="margin-top:20px">
-      <figure class="tile reveal"><div class="ph"></div><figcaption class="badge chip">Laser Akrilik</figcaption><div class="cap">Display Toko & Signage</div></figure>
-      <figure class="tile reveal"><div class="ph"></div><figcaption class="badge chip">Router Kayu</figcaption><div class="cap">Panel Dinding Motif</div></figure>
-      <figure class="tile reveal"><div class="ph"></div><figcaption class="badge chip">Plasma Besi</figcaption><div class="cap">Tralis & Ornamen</div></figure>
-      <figure class="tile reveal"><div class="ph"></div><figcaption class="badge chip">Engraving</figcaption><div class="cap">Gift & Merchandise</div></figure>
-      <figure class="tile reveal"><div class="ph"></div><figcaption class="badge chip">Huruf Timbul</figcaption><div class="cap">Sign Outdoor</div></figure>
-      <figure class="tile reveal"><div class="ph"></div><figcaption class="badge chip">Cutting ACP</figcaption><div class="cap">Fascia Bangunan</div></figure>
-    </div>
-  </section>  <!-- Stats -->  <section class="section container">
-    <div class="grid stats">
-      <div class="card stat reveal"><div class="big" data-count="1200">0</div><div class="muted">+ Proyek Terselesaikan</div></div>
-      <div class="card stat reveal"><div class="big" data-count="48">0</div><div class="muted">Kota Terlayani</div></div>
-      <div class="card stat reveal"><div class="big" data-count="4">0</div><div class="muted">Mesin Produksi</div></div>
-      <div class="card stat reveal"><div class="big" data-count="7">0</div><div class="muted">Tahun Pengalaman</div></div>
-    </div>
-  </section>  <!-- Testimoni (Carousel ringan) -->  <section class="section container">
-    <h2 class="reveal" style="margin:0 0 8px; font-size:34px">Apa Kata Klien</h2>
-    <div class="carousel card reveal">
-      <div class="slides" id="slides">
-        <article class="slide">
-          <p>“Presisi rapi, jadinya mewah. Deadline mepet tetap selesai tepat waktu. Rekomendasi!”</p>
-          <div class="muted small">— Andi • Owner Toko Akrilik</div>
-        </article>
-        <article class="slide">
-          <p>“Panel router motifnya detail. Tim bantu instalasi sampai finish, mantap.”</p>
-          <div class="muted small">— Rina • Interior Designer</div>
-        </article>
-        <article class="slide">
-          <p>“Cutting plasma cepat, hasil mulus. Harga masuk akal untuk kualitasnya.”</p>
-          <div class="muted small">— Yusuf • Bengkel Fabrikasi</div>
-        </article>
+      <div class="flex gap-3">
+        <a href="https://wa.me/628114901407?text=Halo%2C%20saya%20ingin%20konsultasi%20proyek%20cutting." target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-white text-sky-700 hover:bg-slate-100 transition">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5"><path fill="currentColor" d="M20.52 3.48A11.94 11.94 0 0 0 12.06 0C5.46 0 .09 5.37.09 12c0 2.11.54 4.19 1.56 6.02L0 24l6.17-1.61A12.02 12.02 0 0 0 12.06 24c6.63 0 12-5.37 12-12c0-3.2-1.25-6.21-3.54-8.52Z"/></svg>
+          Chat WhatsApp
+        </a>
+        <a href="#" class="inline-flex items-center gap-2 px-5 py-3 rounded-2xl ring-1 ring-white/60 hover:bg-white/10 transition">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5"><path fill="currentColor" d="M12 2L1.5 6.75V8h21V6.75zM3 9v9h6V9zm7 0v9h11V9z"/></svg>
+          Download Profil (PDF)
+        </a>
       </div>
     </div>
-  </section>  <!-- CTA Besar -->  <section class="section container">
-    <div class="cta reveal">
-      <h3 style="margin:0 0 8px; font-size:28px">Siap mulai proyek Anda?</h3>
-      <p class="muted" style="margin:0 0 18px">Kirim sketsa/ukuran via WhatsApp. Kami bantu cek file & estimasi cepat.</p>
-      <div class="hero-cta">
-        <a class="btn primary ripple" href="https://wa.me/628114901407?text=Halo%20Sentra%20Ukir%20Jayapura%2C%20mohon%20estimasi%20harga%20proyek" target="_blank" rel="noopener">Chat Admin Sekarang</a>
-        <a class="btn ripple" href="mailto:sentraukirjayapura@example.com">Email Penawaran</a>
-      </div>
-    </div>
-  </section>  <!-- Kontak & Lokasi -->  <section id="kontak" class="section container">
-    <h2 class="reveal" style="margin:0 0 8px; font-size:34px">Kontak & Lokasi</h2>
-    <div class="grid" style="grid-template-columns:1.2fr .8fr">
-      <div class="card reveal" style="padding:20px">
-        <h3>Sentra Ukir Jayapura</h3>
-        <p class="muted">Meco Prima, BTN Skylen, Kotaraja — Jayapura</p>
-        <div style="display:flex; gap:12px; flex-wrap:wrap; margin:12px 0 8px">
-          <a class="btn ripple" href="tel:+628114901407">📞 0811-4901-407</a>
-          <a class="btn ripple" href="https://wa.me/628114901407" target="_blank" rel="noopener">💬 WhatsApp</a>
-          <a class="btn ripple" href="#" onclick="alert('Masukkan tautan Instagram di script.'); return false;">📸 Instagram</a>
-          <a class="btn ripple" href="#" onclick="alert('Masukkan tautan Facebook di script.'); return false;">📘 Facebook</a>
-        </div>
-        <p class="small muted">Jam Operasional: Senin–Sabtu 09:00–18:00 WIT</p>
-      </div>
-      <div class="card reveal" style="padding:0; overflow:hidden">
-        <div style="aspect-ratio:4/3; width:100%; background:linear-gradient(135deg, rgba(53,161,255,.25), rgba(155,92,255,.25)); display:grid; place-items:center">
-          <div class="muted small" style="text-align:center; padding:10px">Peta Google bisa ditanam di sini.<br/>Ganti dengan embed map toko Anda.</div>
-        </div>
-      </div>
-    </div>
-  </section>  <footer>
-    <div class="container foot">
-      <div class="left logo">
-        <svg viewBox="0 0 64 64" aria-hidden="true" class="" style="opacity:.8"><use href="#"></use></svg>
-        <div>
-          <div class="brand">Sentra Ukir Jayapura</div>
-          <div class="sub">© <span id="year"></span> All rights reserved.</div>
-        </div>
-      </div>
-      <div class="social">
-        <a class="tip" data-tip="Instagram" id="ig" href="#" target="_blank" aria-label="Instagram" rel="noopener">⌘</a>
-        <a class="tip" data-tip="Facebook" id="fb" href="#" target="_blank" aria-label="Facebook" rel="noopener">ƒ</a>
-        <a class="tip" data-tip="WhatsApp" href="https://wa.me/628114901407" target="_blank" aria-label="WhatsApp" rel="noopener">✆</a>
-      </div>
-    </div>
-  </footer>  <script>
-    // ====== Background Particles Canvas (simple, lightweight) ======
-    const cv = document.getElementById('bg'), ctx = cv.getContext('2d');
-    let w, h, dots = [];
-    const DPR = Math.min(2, window.devicePixelRatio || 1);
-    const R = 1.5, LINK_DIST = 120, N = 70;
-    function resize(){ w = cv.width = innerWidth * DPR; h = cv.height = (innerHeight*0.7) * DPR; cv.style.width = innerWidth+'px'; cv.style.height = (innerHeight*0.7)+'px'; }
-    function init(){ dots = Array.from({length:N}, ()=>({ x: Math.random()*w, y: Math.random()*h, vx: (Math.random()-.5)*.4, vy:(Math.random()-.5)*.4 })); }
-    function step(){ ctx.clearRect(0,0,w,h); ctx.fillStyle='rgba(255,255,255,.5)'; ctx.strokeStyle='rgba(142,161,192,.25)';
-      for(const p of dots){ p.x+=p.vx; p.y+=p.vy; if(p.x<0||p.x>w) p.vx*=-1; if(p.y<0||p.y>h) p.vy*=-1; ctx.beginPath(); ctx.arc(p.x, p.y, R*DPR, 0, Math.PI*2); ctx.fill(); }
-      for(let i=0;i<dots.length;i++){ for(let j=i+1;j<dots.length;j++){ const a=dots[i], b=dots[j]; const dx=a.x-b.x, dy=a.y-b.y; const d=Math.hypot(dx,dy); if(d<LINK_DIST*DPR){ ctx.globalAlpha = (1 - d/(LINK_DIST*DPR))*.6; ctx.beginPath(); ctx.moveTo(a.x,a.y); ctx.lineTo(b.x,b.y); ctx.stroke(); ctx.globalAlpha=1; }}}
-      requestAnimationFrame(step);
-    }
-    addEventListener('resize', ()=>{resize(); init();});
-    resize(); init(); step();
+  </div>
+  <p class="text-center text-xs opacity-60 mt-4">© <span id="year"></span> Sentra Ukir Jayapura • Dibuat cepat oleh tim Anda</p>
+</footer>
 
-    // ====== Reveal on Scroll with IntersectionObserver ======
-    const io = new IntersectionObserver(entries=>{
-      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); io.unobserve(e.target);} });
-    }, { threshold:.15 });
-    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 
-    // ====== Counter Up ======
-    const counters = document.querySelectorAll('[data-count]');
-    const io2 = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{ if(!e.isIntersecting) return; const el=e.target; const to=+el.dataset.count; let v=0; const dur=1200; const t0=performance.now();
-        function anim(t){ const k=Math.min(1,(t-t0)/dur); v=Math.floor(to*k*k + (to*0.05)*Math.sin(k*6)); el.textContent=v.toLocaleString('id-ID'); if(k<1) requestAnimationFrame(anim); }
-        requestAnimationFrame(anim); io2.unobserve(el); });
-    },{threshold:.6});
-    counters.forEach(c=>io2.observe(c));
-
-    // ====== Carousel Auto Slide ======
-    const slides = document.getElementById('slides');
-    let sIdx = 0; setInterval(()=>{ if(!slides) return; const total = slides.children.length; sIdx = (sIdx+1)%total; slides.scrollTo({left: slides.clientWidth*sIdx, behavior:'smooth'}); }, 3500);
-
-    // ====== Ripple Buttons ======
-    document.querySelectorAll('.btn.ripple').forEach(btn=>{
-      btn.addEventListener('click', function(e){ const r=document.createElement('span'); const rect=this.getBoundingClientRect(); const size=Math.max(rect.width, rect.height); r.className='r'; r.style.width=r.style.height=size+'px'; r.style.left=(e.clientX-rect.left-size/2)+'px'; r.style.top=(e.clientY-rect.top-size/2)+'px'; this.appendChild(r); setTimeout(()=>r.remove(), 700); });
-    });
-
-    // ====== Year & Social Links (edit here) ======
-    document.getElementById('year').textContent = new Date().getFullYear();
-    // Ganti tautan sosial di sini
-    const INSTAGRAM_URL = 'https://instagram.com/'; // TODO: isi akun IG
-    const FACEBOOK_URL = 'https://facebook.com/'; // TODO: isi halaman FB
-    document.getElementById('ig').href = INSTAGRAM_URL;
-    document.getElementById('fb').href = FACEBOOK_URL;
-  </script></body>
+  </body>
 </html>
