@@ -1,193 +1,166 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sentra Ukir Jayapura — Jasa Cutting Laser | Router | Plasma</title>
-  <meta name="description" content="Sentra Ukir Jayapura: Jasa Cutting Laser, Router CNC, Plasma. Bahan: PVC Board, Akrilik, ACP, Triplex, Stainless, Plat Besi, MDF, dan pembuatan huruf timbul.">
-  <meta name="theme-color" content="#FFD700">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sentra Ukir Jayapura – Jasa Cutting Laser Router Plasma</title>
   <style>
     :root{
       --brand:#FFD700; /* emas terang */
       --dark:#0e0e0f;
       --text:#2b2b2b;
       --muted:#747474;
-      --bg:#fff8f2;
+      --bg:#fff;
       --radius:18px;
     }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial;color:var(--text);background:#fff}
-    a{color:inherit;text-decoration:none}
-    img{max-width:100%;display:block}
-    .container{width:min(1100px,96%);margin:0 auto}
-
-    /* Hero (Banner Sampul) */
+    body{
+      margin:0;
+      font-family:Arial, Helvetica, sans-serif;
+      background:var(--bg);
+      color:var(--text);
+    }
+    /* Banner Sampul */
     .hero{
-      position:relative;overflow:hidden;color:#fff;
-      background:linear-gradient(180deg,#141414, #1b1b1b 60%, #24180f),
-                 url('images/banner-workshop.jpg') center/cover no-repeat;
+      background:linear-gradient(180deg,#141414a6, #1b1b1bb3),
+                 url('images/banner.jpg') center/cover no-repeat;
+      color:#fff;
+      padding:100px 20px 60px;
+      text-align:center;
     }
-    .hero::after{
-      content:"";position:absolute;inset:0;background:rgba(0,0,0,.45);z-index:0
+    .hero h1{
+      font-size:2.2rem;
+      color:var(--brand);
+      margin-bottom:10px;
     }
-    .heroInner{position:relative;z-index:1;padding:90px 0;text-align:center}
-    .hero h2{font-size:clamp(26px,5vw,42px);margin:0 0 10px}
-    .hero p{max-width:700px;margin:0 auto;color:#eaeaea;line-height:1.6}
-    .ctaWrap{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:20px}
+    .hero p{
+      font-size:1rem;
+      max-width:700px;
+      margin:0 auto;
+      line-height:1.5;
+    }
+    header{
+      background:#111;
+      color:#fff;
+      padding:15px 20px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:15px;
+    }
+    header img{
+      width:60px;
+      height:60px;
+      border-radius:50%;
+      object-fit:cover;
+    }
+    header h2{
+      margin:0;
+      font-size:1.4rem;
+      color:var(--brand);
+    }
+    section{
+      padding:40px 20px;
+      max-width:1000px;
+      margin:auto;
+    }
+    h3{
+      text-align:center;
+      color:var(--brand);
+      margin-bottom:20px;
+    }
     .btn{
-      --h:50px;display:inline-flex;align-items:center;justify-content:center;
-      height:var(--h);padding:0 18px;border-radius:calc(var(--h)/2);
-      font-weight:600;border:0;cursor:pointer;position:relative;
-      box-shadow:0 6px 20px rgba(0,0,0,.2)
+      display:inline-block;
+      padding:10px 20px;
+      border-radius:var(--radius);
+      background:var(--brand);
+      color:#000;
+      text-decoration:none;
+      font-weight:bold;
+      transition:0.3s;
+      margin:5px;
     }
-    .btnPrimary{background:var(--brand);color:#111}
-    .btnGhost{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.4);color:#fff}
-
-    /* Header (Logo & Judul) */
-    header{background:#fff;box-shadow:0 4px 14px rgba(0,0,0,.08)}
-    .nav{display:flex;align-items:center;gap:14px;padding:12px 0}
-    .brand{display:flex;align-items:center;gap:10px}
-    .brand img{width:60px;height:60px;border-radius:12px;object-fit:cover}
-    .brand h1{font-size:20px;margin:0}
-    .chip{font-size:13px;background:var(--bg);padding:4px 10px;border-radius:999px;border:1px solid #eee}
-
-    /* Sections */
-    section{padding:56px 0}
-    .card{background:#fff;border:1px solid #eee;border-radius:var(--radius);padding:20px;box-shadow:0 6px 18px rgba(0,0,0,.05)}
-    .grid{display:grid;gap:18px}
-    .grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
-    .grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
-    @media (max-width:900px){.grid-2,.grid-3{grid-template-columns:1fr}}
-    h3.sectionTitle{font-size:24px;margin:0 0 16px}
-    .muted{color:var(--muted)}
-    ul.features{columns:2;padding-left:18px}
-    ul.features li{margin:6px 0}
-
+    .btn:hover{
+      background:#e6c200;
+    }
     /* Galeri */
-    .thumb{border-radius:14px;overflow:hidden;border:1px solid #eee}
-    .thumb img{aspect-ratio:1.3/1;object-fit:cover}
-
-    /* Footer */
-    footer{padding:30px 0;background:#0f0f0f;color:#ccc;text-align:center}
-    footer a{color:#fff}
-    .copyright{margin-top:8px;font-size:13px;color:#888}
-
-    /* Tombol WA mengambang */
-    .floating{position:fixed;right:14px;bottom:14px;z-index:60;display:flex;flex-direction:column;gap:10px}
-    .floatBtn{background:#25D366;color:#111;border-radius:999px;padding:10px 14px;font-weight:600;border:0}
+    .galeri{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:15px;
+    }
+    .galeri img{
+      width:100%;
+      border-radius:var(--radius);
+      box-shadow:0 4px 10px rgba(0,0,0,0.2);
+    }
+    footer{
+      background:#111;
+      color:#fff;
+      padding:20px;
+      text-align:center;
+      font-size:0.9rem;
+    }
+    footer a{
+      color:var(--brand);
+      text-decoration:none;
+    }
   </style>
 </head>
 <body>
 
-  <!-- Banner / Sampul di atas -->
+  <!-- Banner / Sampul -->
   <section class="hero">
-    <div class="container heroInner">
-      <h2>Jasa Cutting Laser • Router CNC • Plasma</h2>
-      <p>Kami melayani pemotongan dan finishing presisi untuk kebutuhan signage, interior, advertising, hingga proyek industri. Mengutamakan kualitas hasil, ketepatan waktu, dan layanan ramah.</p>
-      <div class="ctaWrap">
-        <a class="btn btnPrimary" href="https://wa.me/628114901407" target="_blank">Chat Admin 1</a>
-        <a class="btn btnPrimary" href="https://wa.me/6281240953965" target="_blank">Chat Admin 2</a>
-        <a class="btn btnGhost" href="#galeri">Lihat Galeri</a>
-      </div>
-    </div>
+    <h1>Jasa Cutting Laser • Router CNC • Plasma</h1>
+    <p>Sentra Ukir Jayapura melayani jasa cutting CNC: akrilik, ACP, PVC board, MDF, triplex, plat besi, stainless, 
+    serta pembuatan huruf timbul dengan hasil rapi, cepat, dan presisi.</p>
   </section>
 
-  <!-- Logo & Judul di bawah banner -->
+  <!-- Logo / Identitas -->
   <header>
-    <div class="container nav">
-      <div class="brand">
-        <!-- Logo profil -->
-        <img src="images/logo-sentrauik-jayapura.jpg" alt="Logo Sentra Ukir Jayapura">
-        <div>
-          <h1>Sentra Ukir Jayapura</h1>
-          <div class="chip">Jasa Cutting Laser • Router • Plasma</div>
-        </div>
-      </div>
-      <div style="margin-left:auto" class="chip">Buka: 08.00–17.00 WIT</div>
+    <img src="images/logo.jpg" alt="Logo Sentra Ukir Jayapura">
+    <div>
+      <h2>Sentra Ukir Jayapura</h2>
+      <small>#katongpapua</small>
     </div>
   </header>
 
-  <!-- Tentang & Layanan -->
-  <section id="tentang">
-    <div class="container grid grid-2">
-      <div class="card">
-        <h3 class="sectionTitle">Tentang Kami</h3>
-        <p>Sentra Ukir Jayapura adalah workshop spesialis <strong>cutting Laser, Router CNC, dan Plasma</strong>. Kami menerima pemotongan berbagai bahan dan pembuatan signage serta huruf timbul.</p>
-      </div>
-      <div class="card">
-        <h3 class="sectionTitle">Layanan & Bahan</h3>
-        <ul class="features">
-          <li>PVC Board</li><li>Akrilik</li><li>ACP</li><li>Triplex</li>
-          <li>Stainless</li><li>Plat Besi</li><li>MDF</li><li>Huruf Timbul</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- Workshop -->
-  <section id="workshop" style="background:var(--bg);">
-    <div class="container grid grid-2">
-      <div class="card">
-        <h3 class="sectionTitle">Foto Workshop</h3>
-        <div class="grid grid-2">
-          <div class="thumb"><img src="images/workshop-1.jpg" alt="Workshop 1"></div>
-          <div class="thumb"><img src="images/workshop-2.jpg" alt="Workshop 2"></div>
-        </div>
-      </div>
-      <div class="card">
-        <h3 class="sectionTitle">Sampul / Banner</h3>
-        <div class="thumb"><img src="images/banner-workshop.jpg" alt="Banner"></div>
-      </div>
-    </div>
-  </section>
-
   <!-- Galeri -->
-  <section id="galeri">
-    <div class="container">
-      <h3 class="sectionTitle">Galeri Hasil</h3>
-      <div class="grid grid-3">
-        <div class="thumb"><img src="images/galeri-1.jpg" alt="Hasil 1"></div>
-        <div class="thumb"><img src="images/galeri-2.jpg" alt="Hasil 2"></div>
-        <div class="thumb"><img src="images/galeri-3.jpg" alt="Hasil 3"></div>
-      </div>
+  <section>
+    <h3>Galeri Hasil Pekerjaan</h3>
+    <div class="galeri">
+      <img src="images/galeri1.jpg" alt="Proyek 1">
+      <img src="images/galeri2.jpg" alt="Proyek 2">
+      <img src="images/galeri3.jpg" alt="Proyek 3">
+      <img src="images/galeri4.jpg" alt="Proyek 4">
     </div>
   </section>
 
-  <!-- Kontak & Lokasi -->
-  <section id="kontak" style="background:var(--bg);">
-    <div class="container grid grid-2">
-      <div class="card">
-        <h3 class="sectionTitle">Kontak</h3>
-        <p>Admin 1: <a href="https://wa.me/628114901407">+62 811-4901-407</a><br>
-           Admin 2: <a href="https://wa.me/6281240953965">0812-4095-3965</a></p>
-        <p>Instagram: <a href="https://instagram.com/sentraukirjayapura" target="_blank">@sentraukirjayapura</a></p>
-      </div>
-      <div class="card">
-        <h3 class="sectionTitle">Alamat</h3>
-        <p>Meco Prima, BTN Skyline Indah, Wai Mhorock, Kec. Abepura, Kota Jayapura, Papua 99225</p>
-        <iframe width="100%" height="250" style="border:0" loading="lazy"
-          src="https://www.google.com/maps?q=Meco%20Prima%20Btn%20skyline%20indah,%20Wai%20Mhorock,%20Abepura,%20Kota%20Jayapura,%20Papua%2099225&output=embed">
-        </iframe>
-      </div>
-    </div>
+  <!-- Kontak -->
+  <section>
+    <h3>Hubungi Kami</h3>
+    <p><strong>WhatsApp Admin Desainer:</strong></p>
+    <p>
+      <a class="btn" href="https://wa.me/628114901407" target="_blank">+62 811-4901-407 (Robby GP)</a>
+      <a class="btn" href="https://wa.me/6281240953965" target="_blank">+62 812-4095-3965</a>
+    </p>
+    <p><strong>Instagram:</strong> 
+      <a href="https://instagram.com/sentraukirjayapura" target="_blank">@sentraukirjayapura</a>
+    </p>
+  </section>
+
+  <!-- Lokasi -->
+  <section id="lokasi">
+    <h3>Lokasi Workshop</h3>
+    <p>Meco Prima Btn Skyline Indah, Wai Mhorock, Kec. Abepura, Kota Jayapura, Papua 99225</p>
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.04766060627!2d140.704!3d-2.576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x686c596f5e5a8f6d%3A0xabcdef1234567890!2sMeco%20Prima%20Btn%20Skyline%20Indah!5e0!3m2!1sid!2sid!4v1690000000000" 
+      width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
   </section>
 
   <!-- Footer -->
   <footer>
-    <div class="container">
-      <div>Sentra Ukir Jayapura — Jasa Cutting Laser • Router • Plasma</div>
-      <div class="copyright">© <span id="y"></span> Sentra Ukir Jayapura</div>
-    </div>
+    <p>&copy; 2025 Sentra Ukir Jayapura. Semua Hak Dilindungi.</p>
   </footer>
 
-  <!-- Tombol WA mengambang -->
-  <div class="floating">
-    <a class="floatBtn" href="https://wa.me/628114901407" target="_blank">WA Admin 1</a>
-    <a class="floatBtn" style="background:#FFD700" href="https://wa.me/6281240953965" target="_blank">WA Admin 2</a>
-  </div>
-
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
