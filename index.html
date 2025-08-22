@@ -1,154 +1,191 @@
-<!DOCTYPE html>
+<!doctype html>
+
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sentra Ukir Jayapura - Jasa Cutting Laser Router Plasma</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sentra Ukir Jayapura — Jasa Cutting Laser Router Plasma</title>
+  <meta name="description" content="Jasa cutting: PVC, acrylic, ACP, tripleks, stainless, plat besi, MDF. Galeri huruf timbul. WA +62 811-4901-407">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0; padding: 0;
-      background: #0d0d0d;
-      color: #f8f8f8;
+    :root{
+      --orange:#ff8c1a;
+      --black:#0b0b0b;
+      --muted:#6b6b6b;
+      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
     }
-    header {
-      background: url('workshop.jpg') center/cover no-repeat;
-      text-align: center;
-      padding: 80px 20px;
-      color: white;
-      position: relative;
-    }
-    header::after {
-      content: "";
-      position: absolute;
-      top:0; left:0; right:0; bottom:0;
-      background: rgba(0,0,0,0.6);
-    }
-    header h1, header h2 {
-      position: relative;
-      z-index: 2;
-    }
-    header h1 {
-      font-size: 2.5rem;
-      color: #ff7a00;
-    }
-    header h2 {
-      font-size: 1.2rem;
-      margin-top: 10px;
-    }
-    .container { max-width: 1100px; margin: auto; padding: 20px; }
-    .deskripsi {
-      background: #1a1a1a;
-      padding: 20px;
-      border-radius: 12px;
-      border-left: 5px solid #ff7a00;
-      color: #ff7a00;
-      line-height: 1.6;
-    }
-    .tombol {
-      display: inline-block;
-      margin: 10px 5px;
-      padding: 12px 18px;
-      border-radius: 8px;
-      font-weight: bold;
-      text-decoration: none;
-      transition: transform 0.3s;
-    }
-    .wa { background:#25D366; color:#fff; }
-    .wa:hover { transform: scale(1.1); }
-    .ig { background:#ff7a00; color:#0d0d0d; }
-    .ig:hover { transform: scale(1.1); }
-    .galeri {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 16px;
-      margin-top: 20px;
-    }
-    .galeri-item {
-      background:#1a1a1a;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-    }
-    .galeri-item img { width: 100%; display: block; }
-    .galeri-item p {
-      padding: 10px;
-      color: #ff7a00;
-      font-size: 0.95rem;
-      text-align: center;
-    }
-    section#lokasi {
-      margin-top: 30px;
-      background:#0d0d0d;
-      padding:20px;
-      border-radius:14px;
-      border:1px solid #ff7a00;
-    }
-    section#lokasi h2 { color:#ff7a00; }
-    footer {
-      text-align:center;
-      padding:20px;
-      background:#1a1a1a;
-      margin-top:30px;
-      color:#888;
-    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,#0b0b0b 0%, #151515 100%);color:#fff}
+    header{background:var(--black);padding:18px 24px;display:flex;align-items:center;gap:18px}
+    .logo{display:flex;align-items:center;gap:12px}
+    .logo img{width:64px;height:64px;object-fit:cover;border-radius:8px}
+    h1{margin:0;font-size:20px;color:var(--orange);letter-spacing:1px}
+    .tag{color:var(--muted);font-size:13px}nav{margin-left:auto;display:flex;gap:10px;align-items:center}
+a.btn{background:transparent;border:2px solid var(--orange);color:var(--orange);padding:8px 12px;border-radius:8px;text-decoration:none;font-weight:600}
+a.btn:hover{background:var(--orange);color:#111}
+
+.hero{display:flex;flex-wrap:wrap;gap:20px;padding:40px 24px;align-items:center}
+.hero .left{flex:1;min-width:280px}
+.hero .right{flex:1;min-width:280px}
+.hero h2{font-size:28px;margin:0 0 12px;color:var(--orange)}
+.lead{color:#ddd;margin-bottom:14px}
+.specs{background:#0f0f0f;padding:16px;border-radius:10px;border:1px solid rgba(255,140,26,0.08)}
+.specs ul{margin:0;padding:0 0 0 18px}
+
+.contact{display:flex;gap:12px;flex-wrap:wrap}
+.wa{background:linear-gradient(90deg,var(--orange),#ff7a00);padding:10px 14px;border-radius:8px;color:#121212;font-weight:700;text-decoration:none}
+
+/* banner */
+.banner{position:relative;margin:12px 24px;border-radius:12px;overflow:hidden}
+.banner img{width:100%;height:260px;object-fit:cover;display:block;filter:brightness(0.6)}
+.banner .banner-text{position:absolute;left:24px;bottom:22px;color:#fff}
+.banner h3{margin:0;font-size:26px;color:var(--orange)}
+
+/* gallery */
+.gallery{padding:20px 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px}
+.card{background:#0f0f0f;padding:8px;border-radius:10px;border:1px solid rgba(255,140,26,0.06);cursor:pointer}
+.card img{width:100%;height:140px;object-fit:cover;border-radius:8px}
+.card p{margin:8px 0 0;font-size:13px;color:var(--muted)}
+
+/* modal */
+.modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,0.7);z-index:60}
+.modal .inner{max-width:920px;width:94%;}
+.modal img{width:100%;height:auto;border-radius:8px}
+
+footer{padding:20px 24px;background:#060606;color:#bbb;margin-top:20px}
+.footer-grid{display:grid;grid-template-columns:1fr 260px;gap:20px;align-items:start}
+.map iframe{width:100%;height:200px;border:0;border-radius:8px}
+
+/* animated button */
+.animate-btn{display:inline-block;padding:12px 18px;border-radius:999px;background:transparent;border:2px solid var(--orange);position:relative;overflow:hidden}
+.animate-btn::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.06),transparent);transform:translateX(-100%);transition:transform .9s}
+.animate-btn:hover::after{transform:translateX(100%)}
+
+@media(max-width:700px){
+  .hero{padding:20px 16px}
+  .banner img{height:180px}
+  .footer-grid{grid-template-columns:1fr}
+}
+
   </style>
 </head>
 <body>
-
   <header>
-    <h1>Sentra Ukir Jayapura</h1>
-    <h2>Jasa Cutting Laser | Router | Plasma</h2>
-  </header>
-
-  <div class="container">
-    <div class="deskripsi">
-      <p><strong>Sentra Ukir Jayapura</strong> adalah penyedia jasa cutting modern di Jayapura
-      dengan teknologi <b>Laser, Router, dan Plasma</b>. Kami melayani berbagai kebutuhan
-      cutting dan ukiran untuk advertising, interior, maupun kebutuhan industri.
-      Dengan tenaga berpengalaman, kami memastikan hasil rapi, presisi, dan berkualitas tinggi.</p>
-      <p>Kami mengerjakan <b>cutting bahan PVC Board, Akrilik, ACP, Triplex, Stainless,
-      Plat Besi, MDF</b>, serta <b>pembuatan huruf timbul</b> untuk kebutuhan reklame dan dekorasi.</p>
-    </div>
-
-    <div style="margin:20px 0;">
-      <a href="https://wa.me/628114901407" class="tombol wa">💬 WhatsApp</a>
-      <a href="https://www.instagram.com/" target="_blank" class="tombol ig">📷 Instagram</a>
-    </div>
-
-    <h2 style="color:#ff7a00;">Galeri Pekerjaan</h2>
-    <div class="galeri">
-      <div class="galeri-item">
-        <img src="galeri1.jpg" alt="Contoh pekerjaan 1">
-        <p>Cutting huruf timbul akrilik untuk papan nama</p>
-      </div>
-      <div class="galeri-item">
-        <img src="galeri2.jpg" alt="Contoh pekerjaan 2">
-        <p>Router CNC untuk dekorasi interior</p>
-      </div>
-      <div class="galeri-item">
-        <img src="galeri3.jpg" alt="Contoh pekerjaan 3">
-        <p>Cutting plasma plat besi untuk konstruksi</p>
+    <div class="logo">
+      <!-- Ganti file logo.png dengan logo berwarna orange & hitam -->
+      <img src="logo.png" alt="Logo Sentra Ukir Jayapura">
+      <div>
+        <h1>Sentra Ukir Jayapura</h1>
+        <div class="tag">Jasa Cutting • Laser • Router • Plasma</div>
       </div>
     </div>
-
-    <section id="lokasi">
-      <h2>📍 Lokasi Kami - Meco Prima Jayapura</h2>
-      <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:14px;">
-        <iframe src="https://www.google.com/maps?q=Meco+Prima+Btn+skyline+indah,+Wai+Mhorock,+Kec.+Abepura,+Kota+Jayapura,+Papua+99225&output=embed"
-          style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
-          allowfullscreen="" loading="lazy">
-        </iframe>
-      </div>
-      <p style="margin-top:10px;color:#ff7a00;">
-        Alamat: Meco Prima, Btn Skyline Indah, Wai Mhorock, Kec. Abepura, Kota Jayapura, Papua 99225
-      </p>
-    </section>
+    <nav>
+      <a class="btn" href="#galeri">Galeri</a>
+      <a class="btn" href="#kontak">Kontak</a>
+      <a class="btn" target="_blank" href="https://instagram.com/">Instagram</a>
+    </nav>
+  </header>  <section class="banner">
+    <!-- Ganti banner.jpg -->
+    <img src="banner.jpg" alt="Banner Sentra Ukir">
+    <div class="banner-text">
+      <h3>Jasa Cutting — Laser • Router • Plasma</h3>
+      <div style="color:#eee;max-width:600px">Melayani cutting dan pembuatan huruf timbul, papan nama, interior, dan display dari beragam bahan: PVC, acrylic, ACP, tripleks, stainless, plat besi, MDF.</div>
+    </div>
+  </section>  <section class="hero">
+    <div class="left">
+      <h2>Deskripsi Jasa</h2>
+      <p class="lead">Kami menyediakan layanan cutting presisi untuk pembuatan huruf timbul, logo, signage, dan komponen interior usaha — menggunakan mesin Laser, Router, dan Plasma. Cocok untuk kebutuhan indoor & outdoor.</p><div class="specs">
+    <strong>Bahan yang kami kerjakan:</strong>
+    <ul>
+      <li>PVC (foam board)</li>
+      <li>Akrilik (acrylic)</li>
+      <li>ACP (Aluminium Composite Panel)</li>
+      <li>Tripleks / Kayu</li>
+      <li>Stainless & Plat Besi</li>
+      <li>MDF dan bahan lainnya</li>
+    </ul>
   </div>
 
-  <footer>
-    &copy; 2025 Sentra Ukir Jayapura | All Rights Reserved
-  </footer>
+  <div style="margin-top:12px">
+    <a class="wa" href="https://wa.me/628114901407" target="_blank">WA Admin +62 811-4901-407</a>
+    <a class="wa" href="https://wa.me/628124095396" target="_blank">WA Admin +62 812-409-53965</a>
+  </div>
 
-</body>
+  <div style="margin-top:14px">
+    <a class="animate-btn" href="#kontak">Hubungi Sekarang</a>
+  </div>
+</div>
+
+<div class="right">
+  <h2>Contoh Pekerjaan</h2>
+  <p class="lead" style="color:#ddd">Klik foto galeri untuk melihat detail. Semua contoh adalah hasil produksi di workshop kami.</p>
+
+  <div id="galeri" class="gallery">
+    <!-- Ganti gambar di bawah dengan hasil foto pekerjaan -->
+    <div class="card" onclick="openModal(this)">
+      <img src="galeri1.jpg" alt="Huruf Timbul 1">
+      <p>Huruf Timbul Acrylic</p>
+    </div>
+    <div class="card" onclick="openModal(this)">
+      <img src="galeri2.jpg" alt="Huruf Timbul 2">
+      <p>Papan Nama ACP</p>
+    </div>
+    <div class="card" onclick="openModal(this)">
+      <img src="galeri3.jpg" alt="Huruf Timbul 3">
+      <p>Huruf Stainless</p>
+    </div>
+    <div class="card" onclick="openModal(this)">
+      <img src="galeri4.jpg" alt="Huruf Timbul 4">
+      <p>Display MDF</p>
+    </div>
+  </div>
+
+</div>
+
+  </section>  <!-- modal untuk lihat gambar -->  <div id="modal" class="modal" onclick="closeModal()">
+    <div class="inner" onclick="event.stopPropagation()">
+      <img id="modal-img" src="" alt="Preview">
+    </div>
+  </div>  <footer id="kontak">
+    <div class="footer-grid">
+      <div>
+        <h3 style="color:var(--orange)">Kontak & Workshop</h3>
+        <p style="margin:6px 0 0;">Alamat: Meco Prima Btn skyline indah, Wai Mhorock, Kec. Abepura, Kota Jayapura, Papua 99225</p>
+        <p style="margin:6px 0 0;">Nomor WA Admin: +62 811-4901-407 / 081240953965</p>
+        <p style="margin:6px 0 8px;">Instagram: <a style="color:var(--orange);text-decoration:none" href="https://instagram.com/" target="_blank">@sentraukir.jayapura</a></p><h4 style="margin-top:8px;color:#fff">Foto Workshop</h4>
+    <div style="display:flex;gap:8px;margin-top:8px">
+      <img src="workshop1.jpg" alt="Workshop" style="width:120px;height:80px;object-fit:cover;border-radius:8px">
+      <img src="workshop2.jpg" alt="Workshop" style="width:120px;height:80px;object-fit:cover;border-radius:8px">
+    </div>
+  </div>
+
+  <div class="map">
+    <h4 style="color:var(--orange);margin:0 0 8px">Lokasi (Google Maps)</h4>
+    <!-- Embed Google Maps; alamat sudah terisi. Ganti q param jika perlu -->
+    <iframe src="https://www.google.com/maps?q=Meco%20Prima%20Btn%20skyline%20indah%2C%20Wai%20Mhorock%2C%20Abepura%2C%20Jayapura%2C%20Papua&output=embed" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+</div>
+
+<div style="margin-top:14px;border-top:1px solid rgba(255,255,255,0.03);padding-top:12px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap">
+  <div style="font-size:13px;color:#999">© "Sentra Ukir Jayapura" — Jasa Cutting Laser | Router | Plasma</div>
+  <div style="font-size:13px;color:#999">Desain & Web: Sentra Ukir (versi demo)</div>
+</div>
+
+  </footer>  <script>
+    function openModal(el){
+      const img = el.querySelector('img').src;
+      const modal = document.getElementById('modal');
+      document.getElementById('modal-img').src = img;
+      modal.style.display = 'flex';
+    }
+    function closeModal(){
+      document.getElementById('modal').style.display = 'none';
+    }
+
+    // Simple lazy replacement for demo: if logo or images not found, show placeholder
+    window.addEventListener('error', function(e){
+      if(e.target.tagName === 'IMG'){
+        e.target.src = 'placeholder.png';
+      }
+    }, true);
+  </script></body>
 </html>
